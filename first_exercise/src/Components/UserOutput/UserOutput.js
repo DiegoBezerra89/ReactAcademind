@@ -1,5 +1,5 @@
-import React from 'react'
-import './UserOutput.css'
+import React from 'react';
+import './UserOutput.css';
 
 const UserOutput = (props) => {
 	return (
@@ -24,7 +24,7 @@ const UserOutput = (props) => {
 				sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 		</div>	
-	)
-}
+	);
+};
 
-export default UserOutput
+export default UserOutput;

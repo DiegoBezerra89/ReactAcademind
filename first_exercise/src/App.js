@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import UserInput from './Components/UserInput/UserInput'
-import UserOutput from './Components/UserOutput/UserOutput'
+import UserInput from './Components/UserInput/UserInput';
+import UserOutput from './Components/UserOutput/UserOutput';
 
 class App extends Component {
 	state = {
-		userName: 'Diego'
+		username: 'Diego'
 	}
 
 	eventHandler = ( event ) => {
-		console.log(event)
+		console.log(event);
 		this.setState({
-			userName: event.target.value
-		})
-	}
+			username: event.target.value
+		});
+	};
 
 	render() {
 		const style = {
@@ -23,21 +22,24 @@ class App extends Component {
 			padding: '20px',
 			textAlign: 'center',
 			border: '1px solid #ccc'
-		}
+		};
 
 		return (
 			<div className='App'>
 				<div style={style}>
 				<h1>Components Exercise</h1>
-					<UserInput changeHandler={this.eventHandler} name={this.state.userName}/>
-					<UserOutput userName={this.state.userName} />
-					<UserOutput userName={this.state.userName} />
-					<UserOutput userName={this.state.userName} />
-					<UserOutput userName={this.state.userName} />
+					<UserInput 
+						changeHandler={this.eventHandler}
+						name={this.state.userName}
+					/>
+					<UserOutput userName={this.state.username} />
+					<UserOutput userName={this.state.username} />
+					<UserOutput userName={this.state.username} />
+					<UserOutput userName={this.state.username} />
 				</div>
 			</div>
-		)
-	}
-}	
+		);
+	};
+}	;
 
 export default App;

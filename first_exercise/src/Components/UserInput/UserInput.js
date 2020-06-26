@@ -1,19 +1,24 @@
-import React from 'react'
-import './UserInput.css'
+import React from 'react';
+import './UserInput.css';
 
 const UserInput = ( props ) => {
-	const style = {
+	const inputStyle = {
 		borderRadius: '3px',
 		border: 'none',
 		padding: '10px'
-	}
+	};
 	
 	return (
-		<div>
+		<div className='UserInput'>
 			<p>UserInput</p>
-			<input type='text' onChange={props.changeHandler} value={props.name} style={style}/>
+			<input 
+				type='text'
+				onChange={props.changeHandler}
+				value={props.name}
+				style={inputStyle}
+			/>
 		</div>
-	)
-}
+	);
+};
 
-export default UserInput
+export default UserInput;
