@@ -12,6 +12,6 @@
 
 	@media(min-width: 500px) {
 		.Person {
-			background-color: blue;
+			background-color: rgb(245, 245, 245);
 		}
 	}
