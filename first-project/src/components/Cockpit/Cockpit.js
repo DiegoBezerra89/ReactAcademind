@@ -1,28 +1,38 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import classes from './Cockpit.module.css';
+import AuthContext from '../../context/auth-context';
 
 const Cockpit = (props) => {
-	let assignedClasses = [];
+	useEffect(() => {
+		toggleBtnRef.current.click();
+	},[]);
+	const toggleBtnRef = useRef(null);
+
+
 	let btnClass = '';
+	let assignedClasses = [];
 
 	if(props.showElement) {
 		btnClass = classes.Red;
 	}
 
-	if(props.persons.length <= 2) {
+	if(props.personsLength <= 2) {
 		assignedClasses.push(classes.textRed);
 	}
-	if(props.persons.length <= 1) {
+	if(props.personsLength <= 1) {
 		assignedClasses.push(classes.fontBold);
 	}
 
 	return (
 		<div className={classes.Cockpit}>
-			<h1>Hello React!</h1>
+			<h1>{props.title}</h1>
 			<p className={assignedClasses.join(' ')}>This is really working!</p>
-			<button className={btnClass} onClick={props.onClick}>Toggle Elements</button>
+			<button ref={toggleBtnRef} className={btnClass} onClick={props.onClick}>Toggle Elements</button>
+			<AuthContext.Consumer>
+			{(context) => <button onClick={context.login}>Log In</button>}				
+			</AuthContext.Consumer>
 		</div>
 	);
 }
 
-export default Cockpit;
+export default React.memo(Cockpit);
