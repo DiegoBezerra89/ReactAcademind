@@ -1,0 +1,84 @@
+Planning a React App:
+
+1 - Component Tree / Component Structure
+    - the design team gives you some thing, and you need to split it up on components.
+    - It's a good idea to know what should go on some component and what not.
+
+2 - Application State
+    - Data you plan on using and manipulating in your application.
+    - 
+3 - Components Vs Containers
+    - what type of components you will use.
+    - Will I use hooks?
+
+
+1
+######################
+###### The UI ########
+######################
+
+- Header at the top
+- Navigation Bar
+#########################################################
+  - Logo								Builder Link	Orders Link
+
+###################################
+- Body
+
+				BURGER BUILDER
+				BURGER BUILDER
+				BURGER BUILDER
+				BURGER BUILDER
+				BURGER BUILDER
+##################################################
+- Some controls
+
+	- box
+		-meet 			addButton DelButton
+		-salad			addButton DelButton
+		-cheese			addButton DelButton
+
+#########################################################
+- checkout
+	- button
+
+
+################################################################333
+
+
+
+ 
+####################################
+##########Component tree############
+####################################
+ 					- app
+	
+					-layout
+	
+
+- Toolbar 		- sideDrawer			- brackdrop			-{props.children} to pass dynamic components
+- drawerToggle										- different pages	
+- logo											- burgerBuilder -> page
+- navigation items							-buildcontrols	- Burger	- modal		
+									-components	-ingredient	
+  									-order buttons  -ingredient
+
+
+
+###########################################
+###############  STATE  ###################
+###########################################
+
+- INGREDIENTS
+{ meet: number
+{ cheese: number
+{ etc
+
+- PURCHASED: true
+- total price: float
+
+
+- BURGER BUILDER
+-  a stateful component
+
+
